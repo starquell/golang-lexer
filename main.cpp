@@ -1,38 +1,12 @@
+#include <iostream>
+
 #include <Lexer.hpp>
+#include <TokenUtils.hpp>
 
-#include <fmt/format.h>
-#include <span>
+int main(int argc, char** argv) {
 
-
-
-int main() {
-
-    auto code = R"(package main
-
-            import "fmt"
-
-            func main() {
-
-                if 7%2 == 0 {
-                    fmt.Println("7 is even")
-                } else {
-                    fmt.Println("7 is odd")
-                }
-
-                if 8%4 == 0 {
-                    fmt.Println("8 is divisible by 4")
-                }
-
-                if num := 9; num < 0 {
-                    fmt.Println(num, "is negative")
-                } else if num < 10 {
-                    fmt.Println(num, "has 1 digit")
-                } else {
-                    fmt.Println(num, "has multiple digits")
-                }
-            })";
-
-    auto res = lab::Lexer{}.process(code);
-
-    auto a = 3;
+    if (argc > 1) {
+        auto res = lab::Lexer{}.process(lab::read_all(argv[1]));
+        std::cout << to_string(res);
+    }
 }
