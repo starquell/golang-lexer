@@ -467,7 +467,7 @@ void lab::Lexer::Impl::handle<lab::Lexer::Impl::State::ClosingBlockComment>(char
 
 auto lab::Lexer::Impl::process(std::string_view input) -> std::vector<Token>
 {
-    _curr_state = {};
+    _curr_state = State::Start;
     _tokens.clear();
 
     for (auto ch: input) {
