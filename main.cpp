@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include <Lexer.hpp>
-#include <TokenUtils.hpp>
+#include <IOUtils.hpp>
 
 int main(int argc, char** argv) {
 

@@ -11,6 +11,7 @@ find_package(fmt)
 
 set(SRC_LIST 
     src/Lexer.cpp
+    src/IOUtils.cpp
 )
 
 add_executable(lexer main.cpp ${SRC_LIST})
