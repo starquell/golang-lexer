@@ -2,7 +2,7 @@
 
 [Specification](https://docs.google.com/document/d/1hro0bH9SGsFGwS_RUtjoKF7ud-OrgWdmZJKFIEmucUE/edit)
 
-Tested on files in `example/`
+Tested on files in `examples/`
 
 ### Requirements
 
